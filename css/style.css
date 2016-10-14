@@ -1,0 +1,449 @@
+@font-face { font-family: 'Ghoulish Fright'; src: url('../font/GhoulFriAOE.ttf') format('truetype'); font-weight: normal; font-style: normal; }
+
+body { background: #000000; color: #fff; font-family: Verdana, sans-serif;  letter-spacing: 1px; }
+
+p { font-family: Myriad Pro, Verdana, sans-serif; letter-spacing: 1px; font-size: 19px; line-height: 24px; }
+
+a { color: #FFFFFF; text-decoration: underline; }
+a:hover { color: #FFFFFF; text-decoration: none; }
+
+button:active,
+button:focus { outline: none; }
+
+.wrapper { width: 100%; height: 100%; background: #000000 url(../images/body-bg.jpg) center 0 no-repeat; margin-bottom: 0.01em; overflow-y: hidden; }
+
+.container { background: none; margin-left: -10px; margin-right: -10px; padding-left: 10px; padding-right: 10px; padding-bottom: 10px; }
+
+.header-cn-logo { margin-top: 12px; margin-bottomn: 12px; }
+
+.header-panel { width: 100%; height: 190px; margin-bottom: 0; }
+.header-logos { width: 55% !important; position: absolute; right: 0; top: 30px; /* top match margin-top on CN logo */ }
+.header-logos > img { float: right; }
+.header-species-found { position: relative; left: 20px; }
+
+#speciesfoundBg  { position: absolute; left: 0; }
+#speciesfound1 { position: absolute; left: 0; }
+#speciesfound2 { position: absolute; left: 0; }
+#speciesfound3 { position: absolute; left: 0; }
+#speciesfound4 { position: absolute; left: 0; }
+#speciesfound5 { position: absolute; left: 0; }
+
+/*
+.hidden-species-01 { text-align: left; margin-top: -453px; margin-bottom: 370px; margin-left: 537px; }
+.hidden-species-02 { text-align: left; margin-top: -270px; margin-bottom: 46px; margin-left: 42px; }
+.hidden-species-03 { text-align: left; margin-top: -239px; margin-left: 726px; }
+.hidden-species-04 { text-align: left; margin-top: -238px; margin-bottom: 34px; margin-left: 331px; }
+.hidden-species-05 { text-align: right; margin-top: -687px; margin-bottom: 34px; margin-right: 138px; }
+*/
+
+/* all are absolutely positioned */
+.hidden-species { z-index: 3; }
+.hidden-species-01 { top: 325px; right: 395px; }
+.hidden-species-02 { top: 650px; left: 14px; }
+.hidden-species-03 { top: -7px; left: 478px; }
+.hidden-species-04 { top: 225px; right: 130px; }
+.hidden-species-05 { top: -48px; left: 49px; }
+
+.inner-panel { width: 100%; min-height: 1275px; position: relative; background: url(../images/inner-bg.png) center 0 no-repeat; background-size: 100% auto; text-align: center; padding-bottom: 100px; margin-top: 0px; }
+.inner-panel-trailer { background-image: url(../images/inner-bg-trailer.png); }
+.inner-panel-prizes { background-image: url(../images/inner-bg-prizes.png); }
+
+.topNavigation { position: relative; top: -30px; z-index: 2; margin-bottom: 35px; }
+.topNavigation li { display: inline; position: absolute; top: 0; }
+#nav1 { left: 20px; }
+#nav2 { left: 223px; top: -4px; }
+#nav3 { left: 427px; top: -9px; }
+#nav4 { top: -16px; left: 700px; }
+
+.firstpanel { margin-bottom: 20px; }
+.pageheading { margin-top: 10px; margin-bottom: 20px; }
+.secondpanel { position: relative; top: -50px; left: -13px; margin-bottom: -60px; }
+
+.home-left-panel,
+.home-right-panel { position: relative; float: left; width: 50%; }
+.home-left-panel { left: 30px; }
+.home-right-panel { right: 30px; }
+
+.characterpanel { margin-bottom: 20px; margin-top: -25px; }
+.characterpanel > img { width: 98%; }
+.dinoIcons { position: absolute; top: 150px; left: 5%; width: 90%; padding: 0 110px; }
+.dinoIcons img  { width: 252px; height: auto; margin: 0 0 30px 0; }
+
+.md-trigger { float: left; cursor: pointer; }
+.md-trigger:nth-of-type(2),
+.md-trigger:nth-of-type(5) { float: right; }
+.md-trigger:nth-of-type(3),
+.md-trigger:nth-of-type(4) { clear: both; }
+.md-trigger:nth-of-type(3) { margin-left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); }
+.md-close { cursor: pointer; }
+.md-modal { height: 80%; width: auto; min-width: 0; }
+.md-content { height: 100%; }
+
+.lightboxClose { position: absolute; right: 120px; z-index: 100; top: -20px; }
+.lightboxContent { height: 100%; }
+.lightboxContent > img { max-height: 100%; width: auto; margin: 0 auto; }
+
+.homeCompetitionText { position: absolute; margin: -433px 9% 0 54.5%; text-align: left; }
+.homeCompetitionText p { color: #000000; font-size: 21px; line-height: 24px; margin: 0 0 8px 0; }
+
+.prizesText { position: absolute; margin: -569px 0 0 56px; width: 460px; text-align: left; }
+.prizesText p { color: #FFFFFF; font-size: 21px; line-height: 27px;  }
+
+.gamefeaturesText { position: absolute; margin: -440px 0 0 56px; width: 830px; text-align: left; }
+.gamefeaturesText p { color: #FFFFFF; font-size: 21px; line-height: 27px; margin: 0px 0px 10px 0px; }
+.gamefeaturesText p.gamefeaturesPara4 { width: 430px; }
+
+.footer { width: 90%; margin: 10px auto 20px; text-align: center; }
+.footer p { font-family: Arial, Helvetica, sans-serif; font-size: 10px; line-height: 14px; color: #FFFFFF; }
+.footer p.footerLinks { font-size: 12px; line-height: 18px; margin: 8px 0px 12px 0px; }
+
+/* Trailer */
+.trailerpanel { width: 80%; height: auto; margin: 0 auto; padding-top: 80px; padding-bottom: 30px; background: url(../images/trailer-panel.png) 0 0 no-repeat; background-size: 100% auto; }
+.trailerpanel-trailer { padding-top: 52px; position: relative; top: 30px; }
+.trailerpanel-home { background-image: url(../images/home-hero.png); padding-bottom: 80px; }
+
+.trailerpanel-title { top: -25px; z-index: 2; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); }
+
+.trailer { width: 100%; margin: 0 auto; padding: 0 20px 0 15px; box-sizing: border-box; position: relative; top: -37px; }
+.trailerpanel-home .trailer { top: -19px; }
+
+.trailerinfo { width: 80%; margin: 0 auto; padding: 20px 60px 70px 30px; box-sizing: border-box; background: url(../images/trailerinfo-bg.png); background-size: 100% 100%; }
+.trailerinfo-container { display: block; height: 245px; overflow-y: scroll; }
+.trailerinfo-container::-webkit-scrollbar { width: 12px; }
+.trailerinfo-container::-webkit-scrollbar-track { background-color: #15283b; }
+.trailerinfo-container::-webkit-scrollbar-thumb { background-color: #FFFFFF; }
+.trailerinfo-container p { margin-bottom: 14px; color: #15283b; font-size: 28px; font-family: 'Ghoulish Fright'; line-height: 24px !important; }
+
+.trailerbuylink { position: relative; top: -60px; }
+
+#trailer_1 { width: 100% !important; height: auto !important; }
+/* end Trailer */
+
+.slicknav_menu { display:none; }
+
+.vjs-default-skin .vjs-big-play-button { left: 44%; margin-top: 22%; width: 94px; height: 94px; background: url(../images/video-play-button.png) 0 0 no-repeat; content: ""; } 
+.vjs-default-skin .vjs-big-play-button::before { content: ""; }
+.vjs-default-skin:hover .vjs-big-play-button, .vjs-default-skin .vjs-big-play-button:focus { background: url(../images/video-play-button-rollover.png) 0 0 no-repeat; }
+.video-js .vjs-tech { position: relative; }
+
+.comp-overlay { background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0; height: 100%; left: 0; opacity: 1; position: fixed; top: 0; transition: all 0.3s ease 0s; visibility: visible; width: 100%; z-index: 1000; }
+.comp-modal { backface-visibility: hidden; height: auto; left: 50%; max-width: 900px; min-width: 320px; position: fixed; top: 50%; -ms-transform: translateX(-50%) translateY(-50%); -webkit-transform: translateX(-50%) translateY(-50%);     -moz-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); visibility: visible; width: 900px; z-index: 2000; }
+.comp-content { height: 550px; width: 590px; background: url(../images/competition-bg.png) 0 0 no-repeat; background-size: 100% auto; border-radius: 3px; color: #fff; margin: 0 auto; position: relative; }
+.comp-entered { background: url(../images/competition-entered-bg.png) 0 0 no-repeat; background-size: 100% 100%; }
+
+.compboxClose { float: right; margin: -20px -20px 0 0; }
+.compboxContent { padding-top: 60px; }
+.compboxText { position: absolute; margin-top: 300px; margin-left: 0px; }
+.compboxText p { max-width: 540px; }
+.compboxText .compInputs label { display: none; }
+.compboxText .compInputs input#answer1, 
+.compboxText .compInputs input#email { width: 320px; height: 25px; margin-top: 9px; margin-left: 127px; border: #222222 3px solid; font-size: 16px; padding-left: 8px; }
+.compInputs { margin-left: 50px; }
+.compCheckboxes { margin: 20px 20px 0; }
+.compCheckboxes p { width: 50%; padding: 0 10px; float: left; box-sizing: border-box; font-size: 16px; color: #1f3d5b; }
+.compCheckboxes a { color: #1f3d5b; }
+.compCheckboxes input,
+.compCheckboxes label { float: left; text-align: left; }
+.compCheckboxes input { width: 5%; }
+.compCheckboxes label { width: 90%; padding-left: 5px; }
+.compSubmit { position: absolute; bottom: -60px; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); }
+
+.compInputs label.error { width: 410px !important; margin-bottom: -11px; margin-top: 0; margin-left: 150px; clear: both; color: red; font-size: 16px; }
+.compCheckboxes label#terms-error { position: absolute; margin-top: 30px; margin-left: 0px; color: red; font-size: 16px; }
+.compCheckboxes label#permission-error { position: absolute; margin-top: 50px; margin-left: 0px; color: red; font-size: 16px; }
+.compCheckboxes label#terms-error, 
+x:-moz-any-link { margin-left: -350px; }
+.compCheckboxes label#permission-error,  
+x:-moz-any-link { margin-left: -3500px; }
+
+#compFormPanel { display: block; }
+
+#termsConditionsPanel,
+.termsConditionsText { height: 100%; width: 100%; box-sizing: border-box; }
+#termsConditionsPanel { display: none; position: absolute; top: 0; left: 0; }
+.termsConditionsText { padding-top: 15px; overflow: auto; width: 100%; background: #add142; }
+.termsConditionsText p { margin: 5px 15px 5px 15px; font-size: 12px; line-height: 15px; }
+.termsboxClose { position: absolute; right: 0; margin: -20px -20px 0 0; }
+
+.termsConditionsText::-webkit-scrollbar { width: 12px; }
+.termsConditionsText::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); border-radius: 10px; }
+.termsConditionsText::-webkit-scrollbar-thumb { border-radius: 10px; -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); }
+
+.thankyouboxContent { padding-top: 150px; }
+.thankyouboxText { text-align: center; }
+.thankyouboxText p { margin-bottom: 20px; }
+.playagain { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); }
+
+.jurassicMusic { position: absolute; z-index: 10000; right: 10px; }
+
+/* ==========================================================================
+   Tablet styles
+   ========================================================================== */
+
+@media screen and (max-width: 959px) {
+	
+	p { font-size: 17px; line-height: 21px; }
+
+	.header-cn-logo img { height: 80px; width: auto; }
+	.header-logos img { height: 195px; width: auto; }
+	.header-panel { height: 112px; }
+	
+	.header-species-found { top: 10px; }
+	.header-species-found img { height: 100px; width: auto; }
+	.header-species-found > div { background-size: contain; background-repeat: no-repeat; }
+	
+	.topNavigation li img { height: 55px; width: auto; }
+
+	#nav1 { top: 6px; left: 28px; }
+	#nav2 { top: 4px; left: 190px; }
+	#nav3 { top: 2px; left: 350px; }
+	#nav4 { top: -2px; left: 560px; }
+
+	.homeCompetitionText { margin: -351px 9% 0 54.5%; }
+	.homeCompetitionText p { font-size: 16px; line-height: 20px; margin: 0 0 8px 0; }
+
+	.home-right-panel,
+	.home-left-panel { width: 45%; }
+	.home-right-panel { float: right; }
+
+	.secondpanel { width: 95%; margin: 0 auto -90px; top: -80px; left: 0; }
+
+	.prizesText { position: absolute; margin: -459px 0 0 48px; width: 356px; text-align: left; }
+	.prizesText p { color: #FFFFFF; font-size: 15px; line-height: 21px; }
+
+	.trailerbuylink { position: relative; top: -110px; left: -180px; }
+	.trailerbuylink img { width: 400px; }
+
+	.gamefeaturesText { position: absolute; margin: -366px 0 0 46px; width: 646px; text-align: left; }
+	.gamefeaturesText p { color: #FFFFFF; font-size: 15px; line-height: 21px;  margin: 0px 0px 8px 0px; }
+	.gamefeaturesText p.gamefeaturesPara4 { width: 300px; }
+
+	.hidden-species-01 { top: 45px; right: 305px; }
+	.hidden-species-02 { top: 460px; left: 11px; }
+	.hidden-species-03 { top: -115px; left: 376px; }
+	.hidden-species-04 { top: 25px; right: 93px; }
+	.hidden-species-05 { top: -92px; left: 5px; }
+
+	.dinoIcons { padding: 0; }
+	.dinoIcons img { width: 175px; }
+
+  .md-trigger { width: 50%; }
+
+	.inner-panel { padding-bottom: 170px; min-height: 1120px; margin-top: 50px; }
+	.wb-logo { float: left; margin-right: 3px; margin-left: 58px; }
+
+	.lightboxBg { width: 100%; margin-left: 0; }
+	.lightboxBg > img { width: 100%; }
+	.lightboxClose { top: -20px; right: 20px; }
+	.lightboxText { margin-top: 10px; }
+
+	.trailerpanel { padding-top: 70px; }
+
+	.playagain { bottom: 10px; }
+}
+
+
+/* ==========================================================================
+   Sub-tablet styles
+   ========================================================================== */
+
+@media only screen and (max-width: 767px) {
+
+	p { font-size: 10px; line-height: 13px; }
+
+	.js #menu { display:none; }
+
+	.js .slicknav_menu { display:block; }
+	.slicknav_menu img { height: 60px; }
+	.slicknav_nav li { border-top: 1px solid #999999; }
+	
+	.header-cn-logo img { height: 70px; width: auto; padding-top: 10px; }
+	.header-logos { margin-top: 10px !important; margin-left: -10px !important; top: 25px; }
+	.header-logos img { height: 120px; width: auto; }
+	.header-panel { height: 82px; margin-top: -10px; }
+
+	.header-species-found { margin-top: -30px !important; }
+	.header-species-found img { height: 70px; width: auto; }
+
+	.topNavigation li { text-align: center; }
+
+	.firstpanel { width: 90%; margin: 20px auto 0; }
+	.home-right-panel { right: 10px; }
+
+	.trailerinfo { padding: 20px;}
+	.trailerinfo-container p { font-size: 18px; font-family: 'Ghoulish Fright'; line-height: 16px !important; }
+	.trailerbuylink { top: -40px; left: -30px; }
+
+	.lightboxText { margin-top: 8%; }
+	.lightboxClose img { width: 50px; height: 50px; }
+	.lightboxContent { padding-top: 70px; }
+	
+	.homeCompetitionText { margin: -209px 9% 0 55.5%; }
+	.homeCompetitionText p { font-size: 10px; line-height: 12px; letter-spacing: 0; margin: 0 0 3px 0; }
+
+	.prizesText { position: absolute; margin: -270px 0 0 27px; width: 214px; text-align: left; }
+	.prizesText p { color: #FFFFFF; font-size: 10px; line-height: 11px;  }
+
+	.gamefeaturesText { position: absolute; margin: -215px 0 0 24px; width: 376px; text-align: left; }
+	.gamefeaturesText p { color: #FFFFFF; font-size: 10px; line-height: 11px; margin: 0px 0px 5px 0px; }
+	.gamefeaturesText p.gamefeaturesPara4 { width: 180px; }
+
+	.inner-panel { padding-bottom: 240px; min-height: 630px; margin-top: 0; }
+	.wb-logo { float: left; margin-right: 3px; margin-left: 0px; }
+	.logos5 { float: right; margin-top: 0px; }
+
+	.hidden-species-01 { top: 50px; right: 130px; }
+	.hidden-species-01 img { height: 125px; }
+	.hidden-species-02 { top: 160px; left: 6px; }
+	.hidden-species-02 img { height: 130px; }
+	.hidden-species-03 { top: -440px; left: -10px; }
+	.hidden-species-04 { top: 4px; right: 30px; }
+	.hidden-species-05 { top: -108px; left: -15px; }
+	.hidden-species-05 img { height: 90px; }
+
+	.dinoIcons { top: 100px; }
+	.dinoIcons img { width: 85px; }
+
+	.comp-content { width: 450px; height: 420px; }
+	.compboxText { width: 100%; margin-top: 210px; }
+	.compboxText .compInputs input#answer1, 
+	.compboxText .compInputs input#email { height: 20px; width: 240px; margin-left: 80px; }
+	.compCheckboxes { margin-top: 10px; }
+	.compCheckboxes p { font-size: 14px; }
+	.compCheckboxes label { width: 85%; }
+
+	.vjs-default-skin .vjs-big-play-button { left: 41%; margin-top: 15%; width: 64px; height: 64px; background: url(../images/video-play-button.png) 0 0 no-repeat; background-size: 100% 100%; content: ""; } 
+	.vjs-default-skin:hover .vjs-big-play-button, .vjs-default-skin .vjs-big-play-button:focus { background: url(../images/video-play-button-rollover.png) 0 0 no-repeat; background-size: 100% 100%; }
+
+	.trailerpanel { padding-top: 50px; }
+
+	.lightboxClose { top: 10px; right: 10px; }
+}
+
+
+/* ==========================================================================
+   Mobile styles
+   ========================================================================== */
+
+@media only screen and (max-width: 479px) {
+
+	.container { background: none; }
+
+	p { font-size: 9px; line-height: 11px; }
+
+	.js .slicknav_menu { margin-top: 40px; }
+	.jurassicMusic { right: 0; top: 0; }
+	.header-cn-logo img { height: 50px; width: auto; padding-top: 10px; }
+	.header-logos { margin-top: 0 !important; margin-left: -14px !important; }
+	.header-logos img { height: 55px; width: auto; }
+	.header-panel { height: 60px; }
+
+	.header-species-found img { height: 50px; width: auto; }
+	
+	.home-right-panel,
+	.home-left-panel { float: none; width: 55%; margin: 0 auto; position: relative; left: 0; }
+	
+	.homeCompetitionText { margin: -157px 9% 0 55%; }
+	.homeCompetitionText p { font-size: 8px; line-height: 8px; letter-spacing: 0; margin: 0 0 1px 0; }
+
+	.prizesText { position: absolute; margin: -200px 0 0 20px; width: 158px; text-align: left; }
+	.prizesText p { color: #FFFFFF; font-size: 8px; line-height: 9px; letter-spacing: 0; }
+
+	.gamefeaturesText { position: absolute; margin: -163px 0 0 20px; width: 260px; text-align: left; }
+	.gamefeaturesText p { color: #FFFFFF; font-size: 8px; line-height: 9px;  letter-spacing: 0; margin: 0px 0px 2px 0px; }
+	.gamefeaturesText p.gamefeaturesPara4 { width: 130px; }
+
+	.characterpanel { margin-top: 15px; }
+
+	.inner-panel { padding-bottom: 200px; min-height: 200px; background-size: 100% 100%; }
+	.inner-panel-trailer { padding-bottom: 0; }
+	.inner-panel-characters { min-height: 1100px; }
+	.inner-panel-home { min-height: 400px; }
+	.inner-panel-prizes { min-height: 200px; }
+
+	.wb-logo { float: left; margin-right: 3px; margin-left: 0px; }
+	.logos5 { float: right; margin-top: 8px; }
+
+	.trailerpanel { padding-top: 45px; padding-bottom: 0; }
+	.trailerpanel-title { width: 100px; }
+	.secondpanel { margin: 0 auto; top: 0; } 
+
+	.trailerbuylink { top: 0; left: 0; }
+
+	.dinoIcons { top: 70px; }
+	.dinoIcons img { width: 100%; margin: 0 0 10px 0; }
+
+	.hidden-species-01 { top: 125px; right: 80px; }
+	.hidden-species-03 { top: -260px; left: -37px; }
+	.hidden-species-04 { top: 63px; right: -30px; }
+	.hidden-species img { height: 100px; }
+	.hidden-species-05 { top: -20px; left: -8px; }
+	.hidden-species-05 img { height: 60px; }
+
+  .md-trigger { float: none !important; margin: 0 auto; }
+
+	.lightboxImage { width: 50%; margin: 0 auto; }
+	.lightboxText { width: 108%; margin-left: -4%; }
+
+	.comp-content { width: 300px; height: 326px; }
+	.compboxText { margin-top: 124px; }
+	.compboxText .compInputs input#answer1, 
+	.compboxText .compInputs input#email { height: 15px; width: 150px; margin-left: 40px; margin-top: 0; border: 1px solid #000000; }
+	.compboxText .compInputs input#email { margin-top: 5px; }
+	.compCheckboxes { margin-top: 5px; }
+	.compCheckboxes p { padding: 0; }
+	.compCheckboxes label,
+	.compCheckboxes input { float: none; display: inline-block; vertical-align: top; }
+	.compCheckboxes label { font-size: 12px; width: 95px; }
+	.compCheckboxes input { width: 20px; height: 20px; }
+	.compboxClose,
+	.termsboxClose { height: 40px; width: 40px; }
+
+	.md-modal { width: 80%; height: auto; }
+
+	.vjs-default-skin .vjs-big-play-button { left: 41%; margin-top: 15%; width: 44px; height: 44px; background: url(../images/video-play-button.png) 0 0 no-repeat; background-size: 100% 100%; content: ""; } 
+	.vjs-default-skin:hover .vjs-big-play-button, .vjs-default-skin .vjs-big-play-button:focus { background: url(../images/video-play-button-rollover.png) 0 0 no-repeat; background-size: 100% 100%; }
+}
+
+/* ---------  COMPETITION CLOSED   -------*/
+
+.competition-is-closed { position: relative; height: 100%; width: 100%; overflow: hidden; } 
+
+.comp-closed__overlay { content: ''; height: 500%; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: black; /* fallback */ background: rgba(0, 0, 0, 0.75); z-index: 9999999; }
+
+.comp-closed__modal { height: 268px; width: 100%; max-width: 768px; position: fixed !important; background-image: url(../images/cn-block-bg.png); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; z-index: 100000000; }
+
+.comp-closed__modal__copy-container { width: 100%; background: #000000; text-align: center; }
+
+.comp-closed__modal__title,
+.comp-closed__modal__copy { width: 100%; padding: 5px 0; font-family: 'lubalinbold', Helvetica, Arial, sans-serif; text-transform: uppercase; line-height: 1; font-size: 36px; }
+
+.comp-closed__modal__copy { background-color: #f70c8b; }
+.comp-closed__modal__copy a { color: #000000; text-decoration: none; }
+.comp-closed__modal__copy a:hover { text-decoration: underline; }
+
+.comp-closed__modal__close { display: block; position: absolute; right: -25px; top: -25px; cursor: pointer; }
+
+.comp-closed--nav__container { display: inline-block; position: relative; }
+
+@media only screen and (max-width: 767px) {
+  .comp-closed__modal { width: 80%; height: 50%; }
+  .comp-closed__modal__copy { font-size: 16px; line-height: 1.25; }
+}
+
+/* ---------  UTILITY CLASSES   -------*/
+
+.clear { clear: both; }
+.pos-rel { position: relative; }
+.pos-abs { position: absolute; }
+.absolute-center { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); }
+.like-link { cursor: pointer; }
+.no-scroll { overflow: hidden; }
+
+/* ---------  GRID TWEAKS   -------*/
+@media only screen and (max-width: 479px) {
+	.inner-panel .column12 {
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
+}
